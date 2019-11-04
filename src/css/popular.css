@@ -1,0 +1,11 @@
+.list-movies{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 35px;
+}
+
+.poster-movies{
+    margin: 10px 0px 10px 0px;
+}
