@@ -9,13 +9,12 @@ export default function useMoreMovieDetails(url) {
     async function fetching() {
       try {
         const remote_url = await axios.get(url);
-        setData(remote_url.data);
+        setData(remote_url.data.cast);
       } catch (error) {
         setError(error);
       }
     }
     fetching();
   }, [url]);
-  console.log(data)
   return { data, error };
 }
