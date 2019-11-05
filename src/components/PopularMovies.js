@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBCol, MDBRow } from "mdbreact";
 import usePopularMovies from "../fetching/usePopularMovies";
 import { Link } from "react-router-dom";
 import "../css/popular.css";

@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Route } from "react-router";
 import DetailsMovies from "./components/DetailsMovies";
 import usePopularMovies from './fetching/usePopularMovies'
-import useMovieDetails from './fetching/useMovieDetails'
 import Home from './components/Home'
 
 function App() {

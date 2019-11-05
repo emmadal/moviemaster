@@ -12,7 +12,11 @@ export default function CastMovie(props) {
     <MDBContainer className="mt-5">
       <MDBRow>
         <MDBCol sm="12">
-          <h2 className="h2-responsive text-center"> Top Cast</h2>
+          <h2 className="h2-responsive text-center font-weight-bold">
+            {" "}
+            Top cast
+          </h2>
+          <hr />
         </MDBCol>
       </MDBRow>
     </MDBContainer>

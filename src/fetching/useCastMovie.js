@@ -16,5 +16,6 @@ export default function useMoreMovieDetails(url) {
     }
     fetching();
   }, [url]);
+  console.log(data)
   return { data, error };
 }
