@@ -16,6 +16,5 @@ export default function useLatestMovies(url) {
     }
     fetching();
   }, [url]);
-  console.log(data);
   return { data, error };
 }

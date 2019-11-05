@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function usePopularMovies(url) {
+export default function useMoreMovieDetails(url) {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 
@@ -9,7 +9,7 @@ export default function usePopularMovies(url) {
     async function fetching() {
       try {
         const remote_url = await axios.get(url);
-        setData(remote_url.data.results);
+        setData(remote_url.data);
       } catch (error) {
         setError(error);
       }

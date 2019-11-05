@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function usePopularMovies(url) {
+export default function useTrailer(url) {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 
