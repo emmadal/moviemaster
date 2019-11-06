@@ -13,7 +13,7 @@ export default function PopularMovies() {
     <MDBContainer fluid>
       <MDBRow className="mt-5">
         <MDBCol sm="12">
-          <h1 className="h1-responsive text-center"> Popular Movies</h1>
+          <h1 className="h1-responsive font-weight-bold text-center"> Popular Movies</h1>
         </MDBCol>
         <div className="list-movies">
           {movies.slice(0, 18).map(x => (

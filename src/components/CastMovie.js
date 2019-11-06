@@ -38,7 +38,8 @@ export default function CastMovie(props) {
               />
               <hr />
               <i className="text-monospace font-weight-bold green-text">{m.name}</i>
-              <p className="text-monospace font-weight-bold red-text">Role: {m.character}</p>
+              <br/>
+              <i className="font-weight-bold red-text">{m.character}</i>
             </div>
           ))}
         </MDBCol>
