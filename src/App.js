@@ -1,8 +1,10 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import { Route } from "react-router";
+import {slide as Menu} from 'react-burger-menu'
 import DetailsMovies from "./components/DetailsMovies";
 import DetailsTv from "./components/DetailsTv";
+import FooterPage from "./components/FooterPage";
 import usePopularMovies from "./fetching/usePopularMovies";
 import usePopularTv from "./fetching/usePopularTv";
 import Home from "./components/Home";
@@ -16,15 +18,20 @@ function App() {
   );
   return (
     <BrowserRouter>
-      <Route exact path="/" component={() => <Home />} />
-      <Route
-        path="/movie/:userId"
-        render={props => <DetailsMovies movies={movies} {...props} />}
-      />
-      <Route
-        path="/tv/:userId"
-        render={props => <DetailsTv tv={tv} {...props} />}
-      />
+      <div>
+        <Switch>
+          <Route exact path="/" component={() => <Home />} />
+          <Route
+            path="/movie/:userId"
+            render={props => <DetailsMovies movies={movies} {...props} />}
+          />
+          <Route
+            path="/tv/:userId"
+            render={props => <DetailsTv tv={tv} {...props} />}
+          />
+        </Switch>
+        <FooterPage/>
+      </div>
     </BrowserRouter>
   );
 }
