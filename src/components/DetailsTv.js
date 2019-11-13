@@ -1,16 +1,15 @@
 // @ts-nocheck
 import React, { useState } from "react";
 import { MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
-import CastMovie from "../components/CastMovie";
-import RestInfo from "../components/RestInfo";
+import CastTv from "../components/CastTv";
 import "../css/details.css";
 
 export default function DetailsTv({ match, tv }) {
-  const [movieId, setMovieId] = useState("");
+  const [tvId, setTvId] = useState("");
   const [isLoad, setIsLoad] = useState(false);
 
   function handleState() {
-    setMovieId(match.params.userId);
+    setTvId(match.params.userId);
     setIsLoad(!isLoad);
   }
   return (
@@ -29,7 +28,7 @@ export default function DetailsTv({ match, tv }) {
             </MDBCol>
             <MDBCol sm="5" className="mt-5">
               <h4 className="h4-responsive font-weight-bold">
-                {x.original_title}
+                {x.original_name}
               </h4>
               <hr />
               <h5 className="h5-responsive"> Description</h5>
@@ -54,8 +53,7 @@ export default function DetailsTv({ match, tv }) {
             </MDBCol>
           </MDBRow>
         ))}
-      <RestInfo movie_id={movieId} loading={isLoad} />
-      <CastMovie movie_id={movieId} loading={isLoad} />
+      <CastTv tv_id={tvId} loading={isLoad} />
     </MDBContainer>
   );
 }

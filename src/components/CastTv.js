@@ -1,11 +1,11 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import useCastMovie from "../fetching/useCastMovie";
+import useCastTv from "../fetching/useCastTv";
 import "../css/cast.css";
 
-export default function CastMovie(props) {
-  const { data: top_cast } = useCastMovie(
-    `https://api.themoviedb.org/3/movie/${props.movie_id}/credits?api_key=f18e966ce46365c9c78d821a876bf83e`
+export default function CastTv(props) {
+  const { data: top_cast } = useCastTv(
+    `https://api.themoviedb.org/3/tv/${props.tv_id}/credits?api_key=f18e966ce46365c9c78d821a876bf83e`
   );
   if (!props.loading) return "";
   return (
@@ -23,7 +23,7 @@ export default function CastMovie(props) {
       <MDBRow>
         <MDBCol sm="12" className="cast_card">
           {top_cast.map(m => (
-            <div className="mycard img-cast text-center" key={m.cast_id}>
+            <div className="mycard img-cast text-center" key={m.id}>
               <img
                 style={{ width: "150px", height: "150px" }}
                 title={`${m.name}`}

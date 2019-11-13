@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 import { Route } from "react-router";
-import {slide as Menu} from 'react-burger-menu'
 import DetailsMovies from "./components/DetailsMovies";
+//import MyMenu from "./components/MyMenu";
 import DetailsTv from "./components/DetailsTv";
 import FooterPage from "./components/FooterPage";
 import usePopularMovies from "./fetching/usePopularMovies";
